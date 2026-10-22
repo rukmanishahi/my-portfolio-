@@ -1,88 +1,696 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2e9d7">
   <meta name="description" content="Rukmani Shahi — Frontend & App Developer · Video Editor. A scrapbook-inspired portfolio.">
+
   <title>Rukmani Shahi — Creative Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
+
+  <!-- Navbar signature sizing -->
+  <style>
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 112px;
+      height: 48px;
+      overflow: visible;
+    }
+
+    .brand img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      mix-blend-mode: multiply;
+    }
+
+    @media (max-width: 700px) {
+      .brand {
+        width: 86px;
+        height: 38px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <div class="progress" aria-hidden="true">
+    <span id="progressBar"></span>
+  </div>
+
   <div class="cursor-star" aria-hidden="true">✦</div>
+
+  <!-- NAVBAR -->
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="Rukmani Shahi home">RS<span>✳</span></a>
-    <div class="topbar-name">RUKMANI SHAHI <span>· CREATIVE PORTFOLIO</span></div>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">MENU <span>＋</span></button>
-    <nav class="nav-links" aria-label="Main navigation"><a href="#about">about</a><a href="#projects">projects</a><a href="#experience">experience</a><a href="#skills">skills</a><a href="#contact">contact ↗</a></nav>
+
+    <!-- Handwritten signature logo -->
+    <a class="brand" href="#home" aria-label="By Rukmani Shahi — Home">
+      <img
+        src="assets/rukmani-signature-logo.png"
+        alt="By Rukmani Shahi"
+      >
+    </a>
+
+    <div class="topbar-name">
+      RUKMANI SHAHI <span>· CREATIVE PORTFOLIO</span>
+    </div>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      MENU <span>＋</span>
+    </button>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact ↗</a>
+    </nav>
+
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero paper" id="home">
-      <div class="hero-frame"><span>@rukmanishahi</span><span>developer · editor · curious human</span><span>portfolio / 2026</span></div>
-      <div class="hero-copy"><p class="intro-small">hi my name is</p><h1 class="hero-name" aria-label="Rukmani Shahi"><span class="name-first">Rukmani</span><span class="name-last">Shahi.</span></h1></div>
-      <div class="hero-photo-wrap" data-parallax="0.12"><div class="photo-tape">A LITTLE INTRO</div><img class="hero-photo" src="assets/rukmani-cutout.png" alt="Rukmani Shahi, portrait cutout"><span class="paperclip" aria-hidden="true"></span><span class="photo-spark">✦</span></div>
-      <p class="hero-tagline">Frontend &amp; App Developer <span>·</span> Video Editor</p>
-      <div class="hero-bottom"><span>Faridabad, India</span><span class="scroll-note">SCROLL TO EXPLORE ↓</span><span>made with curiosity &amp; code</span></div>
-      <div class="hero-sticker sticker-star" aria-hidden="true">✦</div><div class="hero-sticker sticker-smile" aria-hidden="true">☺</div>
+
+      <div class="hero-frame">
+        <span>@rukmanishahi</span>
+        <span>developer · editor · curious human</span>
+        <span>portfolio / 2026</span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="intro-small">hi my name is</p>
+
+        <h1 class="hero-name" aria-label="Rukmani Shahi">
+          <span class="name-first">Rukmani</span>
+          <span class="name-last">Shahi.</span>
+        </h1>
+      </div>
+
+      <div class="hero-photo-wrap" data-parallax="0.12">
+
+        <div class="photo-tape">A LITTLE INTRO</div>
+
+        <img
+          class="hero-photo"
+          src="assets/rukmani-cutout.webp"
+          alt="Rukmani Shahi portrait"
+        >
+
+        <span class="paperclip" aria-hidden="true"></span>
+        <span class="photo-spark">✦</span>
+
+      </div>
+
+      <p class="hero-tagline">
+        Frontend &amp; App Developer
+        <span>·</span>
+        Video Editor
+      </p>
+
+      <div class="hero-bottom">
+        <span>Faridabad, India</span>
+        <span class="scroll-note">SCROLL TO EXPLORE ↓</span>
+        <span>made with curiosity &amp; code</span>
+      </div>
+
+      <div class="hero-sticker sticker-star" aria-hidden="true">✦</div>
+      <div class="hero-sticker sticker-smile" aria-hidden="true">☺</div>
+
     </section>
 
-    <div class="marquee" aria-label="Areas of work"><div class="marquee-track">WEB DEV ✦ VIDEO EDITING ✦ APP DEV ✦ FIGMA ✦ BUILDING THINGS ✦ WEB DEV ✦ VIDEO EDITING ✦ APP DEV ✦ FIGMA ✦ BUILDING THINGS ✦</div></div>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="Areas of work">
+      <div class="marquee-track">
+        WEB DEV ✦ VIDEO EDITING ✦ APP DEV ✦ FIGMA ✦ BUILDING THINGS ✦
+        WEB DEV ✦ VIDEO EDITING ✦ APP DEV ✦ FIGMA ✦ BUILDING THINGS ✦
+      </div>
+    </div>
 
+    <!-- ABOUT -->
     <section class="about section-pad" id="about">
-      <div class="section-top"><span class="eyebrow">01 / THE PERSON BEHIND THE PIXELS</span><span class="pill">a little about me ↘</span></div>
+
+      <div class="section-top">
+        <span class="eyebrow">01 / THE PERSON BEHIND THE PIXELS</span>
+        <span class="pill">a little about me ↘</span>
+      </div>
+
       <div class="about-grid">
-        <div class="about-title reveal"><span class="highlight">hello!</span><h2>about <em>myself</em></h2><p class="big-serif">Curious by nature.<br>Builder by habit.</p><div class="scribble">currently learning<br>by making things ↗</div></div>
-        <div class="about-note reveal"><span class="note-pin"></span><p>Hey, I’m Rukmani — a developer and video editor who likes turning ideas into useful, good-looking experiences. I work across websites, mobile apps, design, and video, and I enjoy figuring out how the pieces fit together.</p><p>I’m based in <strong>Faridabad, India</strong>, and pursuing a <strong>B.Tech in Robotics Engineering at Galgotias University (2025–2029)</strong> in Greater Noida, India.</p><div class="education-stamp"><span>EDUCATION</span><strong>B.Tech · Robotics Engineering</strong><small>Galgotias University · 2025–2029 · Greater Noida, India</small></div><div class="note-footer">✳ ALWAYS A WORK IN PROGRESS</div></div>
+
+        <div class="about-title reveal">
+          <span class="highlight">hello!</span>
+          <h2>about <em>myself</em></h2>
+
+          <p class="big-serif">
+            Curious by nature.<br>
+            Builder by habit.
+          </p>
+
+          <div class="scribble">
+            currently learning<br>
+            by making things ↗
+          </div>
+        </div>
+
+        <div class="about-note reveal">
+
+          <span class="note-pin"></span>
+
+          <p>
+            Hey, I’m Rukmani — a developer and video editor who likes
+            turning ideas into useful, good-looking experiences. I work
+            across websites, mobile apps, design, and video, and I enjoy
+            figuring out how the pieces fit together.
+          </p>
+
+          <p>
+            I’m based in <strong>Faridabad, India</strong>, and pursuing a
+            <strong>B.Tech in Robotics Engineering at Galgotias University
+            (2025–2029)</strong> in Greater Noida, India.
+          </p>
+
+          <div class="education-stamp">
+            <span>EDUCATION</span>
+            <strong>B.Tech · Robotics Engineering</strong>
+            <small>Galgotias University · 2025–2029 · Greater Noida, India</small>
+          </div>
+
+          <div class="note-footer">✳ ALWAYS A WORK IN PROGRESS</div>
+
+        </div>
       </div>
-      <div class="skill-strip"><span>HTML</span><b>✦</b><span>CSS</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Flutter</span><b>✦</b><span>Figma</span></div>
+
+      <div class="skill-strip">
+        <span>HTML</span><b>✦</b>
+        <span>CSS</span><b>✦</b>
+        <span>JavaScript</span><b>✦</b>
+        <span>Flutter</span><b>✦</b>
+        <span>Figma</span>
+      </div>
+
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects section-pad pink-section" id="projects">
-      <div class="section-top"><span class="eyebrow">02 / THINGS I’VE MADE</span><span class="pill">ideas into reality ↘</span></div>
-      <div class="projects-heading reveal"><h2><span class="highlight">selected</span><br><em>projects.</em></h2><p>Small snapshots of what I’ve been building.<br><span>Swipe / scroll to explore →</span></p></div>
-      <div class="project-rail">
-        <article class="project-card polaroid reveal"><div class="project-image mock-co2"><span class="mock-label">PROJECT IMAGE PLACEHOLDER</span><div class="mock-window"><div class="mock-dots">● ● ●</div><strong>yourCO₂day</strong><div class="mock-number">4.8 <small>kg CO₂</small></div><div class="mock-bars"><i></i><i></i><i></i><i></i><i></i></div></div><span class="project-index">01</span></div><div class="polaroid-caption"><span class="highlight">web app</span><h3>CO2 Emission Calculator</h3><ul><li>Built an interactive carbon footprint tracker with daily activity logging and CO2 output visualisation.</li><li>Added personalised reduction recommendations driven by user-submitted data.</li></ul><a href="https://yourco2day.neocities.org/" target="_blank" rel="noreferrer">visit project ↗</a></div></article>
-        <article class="project-card polaroid reveal"><div class="project-image mock-tax"><span class="mock-label">PROJECT IMAGE PLACEHOLDER</span><div class="phone-mock"><span>tax planner</span><b>Plan smarter.</b><div class="phone-line"></div><div class="phone-line short"></div><div class="phone-amount">₹ 0.00</div><div class="phone-button">calculate</div></div><span class="project-index">02</span></div><div class="polaroid-caption"><span class="highlight">mobile app</span><h3>Tax Calculator &amp; Planner</h3><ul><li>Designed and built a tax planning app that computes liabilities from user input.</li></ul><a href="#contact">ask me about it ↗</a></div></article>
-        <article class="project-card polaroid reveal"><div class="project-image mock-chat"><span class="mock-label">PROJECT IMAGE PLACEHOLDER</span><div class="chat-window"><b>homework helper</b><p>hey! what are we working on?</p><p class="chat-reply">Can you explain this question?</p><p>Let’s break it down ✦</p></div><span class="project-index">03</span></div><div class="polaroid-caption"><span class="highlight">rule-based</span><h3>Homework Helper Chatbot</h3><ul><li>Built a chatbot that answers common student homework queries.</li></ul><a href="#contact">ask me about it ↗</a></div></article>
-        <article class="project-card polaroid reveal"><div class="project-image mock-robot"><span class="mock-label">PROJECT IMAGE PLACEHOLDER</span><div class="robot-art">▦<br><span>ESP32</span><br>⌁</div><div class="robot-tag">AUTONOMOUS<br>WAREHOUSE ROBOT</div><span class="project-index">04</span></div><div class="polaroid-caption"><span class="highlight">embedded C/C++ · ESP32</span><h3>Smart Warehouse Autonomous Robot</h3><ul><li>Built and programmed an autonomous warehouse robot powered by an ESP32 microcontroller using C/C++.</li><li>Embedded a custom HTML/CSS web interface hosted directly on the ESP32’s Wi-Fi access point, enabling real-time remote movement control via any browser-connected device.</li></ul><a href="#contact">project details ↗</a></div></article>
-      </div><p class="rail-hint">✳ DRAG YOUR CURIOSITY THIS WAY — SCROLL SIDEWAYS ON DESKTOP</p>
-    </section>
 
-    <div class="marquee marquee-dark"><div class="marquee-track">MAKE IT WORK ✦ MAKE IT CLEAR ✦ MAKE IT FEEL RIGHT ✦ MAKE IT WORK ✦ MAKE IT CLEAR ✦ MAKE IT FEEL RIGHT ✦</div></div>
-
-    <section class="experience section-pad" id="experience">
-      <div class="section-top"><span class="eyebrow">03 / WHERE I’VE CONTRIBUTED</span><span class="pill">work &amp; leadership</span></div>
-      <div class="experience-heading reveal"><h2><span class="highlight">experience</span><br><em>in the making.</em></h2><p>Different roles, different teams — always something new to learn.</p></div>
-      <div class="timeline">
-        <article class="timeline-item reveal"><span class="timeline-no">01</span><div><h3>Video Editor</h3><p class="role-meta">All Booked · Student Council Book Club</p><ul><li>Edit short-form videos (reels and event content) for the college's student council book club.</li></ul><a href="#" target="_blank" rel="noreferrer">view edited videos ↗ <small>(replace # with your portfolio link)</small></a></div><span class="timeline-stamp">CUT / EDIT / REPEAT</span></article>
-        <article class="timeline-item reveal"><span class="timeline-no">02</span><div><h3>Student Intern</h3><p class="role-meta">Scaler School of Technology · 2025 · Hybrid, Bangalore</p><ul><li>Worked in Figma on UI/UX workflows and product design thinking.</li><li>Collaborated with mentors on brand building and the modern tech landscape.</li></ul></div><span class="timeline-stamp">2025</span></article>
-        <article class="timeline-item reveal"><span class="timeline-no">03</span><div><h3>Head of Information Technology</h3><p class="role-meta">DAV Schools Network</p><ul><li>Led the school's IT initiatives across digital infrastructure and student-facing projects.</li><li>Built school-level tech projects using Flutter, Android Studio and MySQL; made supporting visuals in Canva.</li><li>Coordinated cross-functional teams, improving workflows for staff and students.</li></ul></div><span class="timeline-stamp">IT / BUILD / LEAD</span></article>
-        <article class="timeline-item reveal"><span class="timeline-no">04</span><div><h3>Team Leader</h3><p class="role-meta">Scholastic India · Hybrid, Faridabad</p><ul><li>Led a team of 30 students to run a large-scale promotional event, handling logistics, coordination and promotion end to end.</li></ul></div><span class="timeline-stamp">TEAM OF 30</span></article>
+      <div class="section-top">
+        <span class="eyebrow">02 / THINGS I’VE MADE</span>
+        <span class="pill">ideas into reality ↘</span>
       </div>
+
+      <div class="projects-heading reveal">
+        <h2>
+          <span class="highlight">selected</span><br>
+          <em>projects.</em>
+        </h2>
+
+        <p>
+          Small snapshots of what I’ve been building.<br>
+          <span>Swipe / scroll to explore →</span>
+        </p>
+      </div>
+
+      <div class="project-rail">
+
+        <!-- PROJECT 1 -->
+        <article class="project-card polaroid reveal">
+
+          <div class="project-image mock-co2">
+            <span class="mock-label">PROJECT IMAGE PLACEHOLDER</span>
+
+            <div class="mock-window">
+              <div class="mock-dots">● ● ●</div>
+              <strong>yourCO₂day</strong>
+              <div class="mock-number">4.8 <small>kg CO₂</small></div>
+
+              <div class="mock-bars">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+
+            <span class="project-index">01</span>
+          </div>
+
+          <div class="polaroid-caption">
+            <span class="highlight">web app</span>
+            <h3>CO2 Emission Calculator</h3>
+
+            <ul>
+              <li>Built an interactive carbon footprint tracker with daily activity logging and CO2 output visualisation.</li>
+              <li>Added personalised reduction recommendations driven by user-submitted data.</li>
+            </ul>
+
+            <a href="https://yourco2day.neocities.org/" target="_blank" rel="noreferrer">
+              visit project ↗
+            </a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card polaroid reveal">
+
+          <div class="project-image mock-tax">
+            <span class="mock-label">PROJECT IMAGE PLACEHOLDER</span>
+
+            <div class="phone-mock">
+              <span>tax planner</span>
+              <b>Plan smarter.</b>
+              <div class="phone-line"></div>
+              <div class="phone-line short"></div>
+              <div class="phone-amount">₹ 0.00</div>
+              <div class="phone-button">calculate</div>
+            </div>
+
+            <span class="project-index">02</span>
+          </div>
+
+          <div class="polaroid-caption">
+            <span class="highlight">mobile app</span>
+            <h3>Tax Calculator &amp; Planner</h3>
+
+            <ul>
+              <li>Designed and built a tax planning app that computes liabilities from user input.</li>
+            </ul>
+
+            <a href="#contact">ask me about it ↗</a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card polaroid reveal">
+
+          <div class="project-image mock-chat">
+            <span class="mock-label">PROJECT IMAGE PLACEHOLDER</span>
+
+            <div class="chat-window">
+              <b>homework helper</b>
+              <p>hey! what are we working on?</p>
+              <p class="chat-reply">Can you explain this question?</p>
+              <p>Let’s break it down ✦</p>
+            </div>
+
+            <span class="project-index">03</span>
+          </div>
+
+          <div class="polaroid-caption">
+            <span class="highlight">rule-based</span>
+            <h3>Homework Helper Chatbot</h3>
+
+            <ul>
+              <li>Built a chatbot that answers common student homework queries.</li>
+            </ul>
+
+            <a href="#contact">ask me about it ↗</a>
+          </div>
+
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="project-card polaroid reveal">
+
+          <div class="project-image mock-robot">
+            <span class="mock-label">PROJECT IMAGE PLACEHOLDER</span>
+
+            <div class="robot-art">
+              ▦<br>
+              <span>ESP32</span><br>
+              ⌁
+            </div>
+
+            <div class="robot-tag">
+              AUTONOMOUS<br>
+              WAREHOUSE ROBOT
+            </div>
+
+            <span class="project-index">04</span>
+          </div>
+
+          <div class="polaroid-caption">
+            <span class="highlight">embedded C/C++ · ESP32</span>
+            <h3>Smart Warehouse Autonomous Robot</h3>
+
+            <ul>
+              <li>Built and programmed an autonomous warehouse robot powered by an ESP32 microcontroller using C/C++.</li>
+              <li>Embedded a custom HTML/CSS web interface hosted directly on the ESP32’s Wi-Fi access point, enabling real-time remote movement control via any browser-connected device.</li>
+            </ul>
+
+            <a href="#contact">project details ↗</a>
+          </div>
+
+        </article>
+
+      </div>
+
+      <p class="rail-hint">
+        ✳ DRAG YOUR CURIOSITY THIS WAY — SCROLL SIDEWAYS ON DESKTOP
+      </p>
+
     </section>
 
+    <!-- DARK MARQUEE -->
+    <div class="marquee marquee-dark">
+      <div class="marquee-track">
+        MAKE IT WORK ✦ MAKE IT CLEAR ✦ MAKE IT FEEL RIGHT ✦
+        MAKE IT WORK ✦ MAKE IT CLEAR ✦ MAKE IT FEEL RIGHT ✦
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <section class="experience section-pad" id="experience">
+
+      <div class="section-top">
+        <span class="eyebrow">03 / WHERE I’VE CONTRIBUTED</span>
+        <span class="pill">work &amp; leadership</span>
+      </div>
+
+      <div class="experience-heading reveal">
+        <h2>
+          <span class="highlight">experience</span><br>
+          <em>in the making.</em>
+        </h2>
+
+        <p>
+          Different roles, different teams — always something new to learn.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-item reveal">
+          <span class="timeline-no">01</span>
+
+          <div>
+            <h3>Video Editor</h3>
+            <p class="role-meta">All Booked · Student Council Book Club</p>
+
+            <ul>
+              <li>Edit short-form videos (reels and event content) for the college's student council book club.</li>
+            </ul>
+
+            <a href="#" target="_blank" rel="noreferrer">
+              view edited videos ↗
+              <small>(replace # with your portfolio link)</small>
+            </a>
+          </div>
+
+          <span class="timeline-stamp">CUT / EDIT / REPEAT</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-no">02</span>
+
+          <div>
+            <h3>Student Intern</h3>
+            <p class="role-meta">Scaler School of Technology · 2025 · Hybrid, Bangalore</p>
+
+            <ul>
+              <li>Worked in Figma on UI/UX workflows and product design thinking.</li>
+              <li>Collaborated with mentors on brand building and the modern tech landscape.</li>
+            </ul>
+          </div>
+
+          <span class="timeline-stamp">2025</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-no">03</span>
+
+          <div>
+            <h3>Head of Information Technology</h3>
+            <p class="role-meta">DAV Schools Network</p>
+
+            <ul>
+              <li>Led the school's IT initiatives across digital infrastructure and student-facing projects.</li>
+              <li>Built school-level tech projects using Flutter, Android Studio and MySQL; made supporting visuals in Canva.</li>
+              <li>Coordinated cross-functional teams, improving workflows for staff and students.</li>
+            </ul>
+          </div>
+
+          <span class="timeline-stamp">IT / BUILD / LEAD</span>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-no">04</span>
+
+          <div>
+            <h3>Team Leader</h3>
+            <p class="role-meta">Scholastic India · Hybrid, Faridabad</p>
+
+            <ul>
+              <li>Led a team of 30 students to run a large-scale promotional event, handling logistics, coordination and promotion end to end.</li>
+            </ul>
+          </div>
+
+          <span class="timeline-stamp">TEAM OF 30</span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS AND CERTIFICATIONS -->
     <section class="skills pink-section section-pad" id="skills">
-      <div class="section-top"><span class="eyebrow">04 / MY TOOLKIT</span><span class="pill">skills &amp; certifications</span></div>
-      <div class="skills-layout"><div class="skills-title reveal"><h2><span class="highlight">skills</span><br><em>&amp things.</em></h2><p>Tools are tools. The fun part is what you make with them.</p><div class="hand-note">still learning<br>still making ✳</div></div>
-      <div class="skill-groups">
-        <div class="skill-group reveal"><span class="group-no">01</span><div><h3>Languages &amp; Web</h3><p>HTML · CSS · JavaScript · C · C++ · Python</p></div><span class="group-mark">⌘</span></div>
-        <div class="skill-group reveal"><span class="group-no">02</span><div><h3>Mobile &amp; Frameworks</h3><p>Flutter · Android Studio</p></div><span class="group-mark">▣</span></div>
-        <div class="skill-group reveal"><span class="group-no">03</span><div><h3>Database</h3><p>MySQL</p></div><span class="group-mark">◉</span></div>
-        <div class="skill-group reveal"><span class="group-no">04</span><div><h3>Design</h3><p>Figma · Canva · PicsArt</p></div><span class="group-mark">✳</span></div>
-        <div class="skill-group reveal"><span class="group-no">05</span><div><h3>Video Editing</h3><p>After Effects · Alight Motion · Funimate · Canva · PicsArt</p></div><span class="group-mark">▶</span></div>
-      </div></div>
-      <div class="certifications reveal"><div class="cert-heading"><span class="highlight">certified-ish</span><h3>proof of learning.</h3></div><div class="cert-list"><div><span>✦</span><p><strong>Vibe Coding – L1 Bronze</strong><small>Lovable · March 2026</small></p></div><div><span>✦</span><p><strong>Scaler School of Technology Internship Challenge</strong><small>Certificate of Participation · 2025</small></p></div><div><span>✦</span><p><strong>C Programming</strong></p></div><div><span>✦</span><p><strong>Python &amp; MySQL</strong></p></div></div></div>
+
+      <div class="section-top">
+        <span class="eyebrow">04 / MY TOOLKIT</span>
+        <span class="pill">skills &amp; certifications</span>
+      </div>
+
+      <div class="skills-layout">
+
+        <div class="skills-title reveal">
+          <h2>
+            <span class="highlight">skills</span><br>
+            <em>&amp things.</em>
+          </h2>
+
+          <p>Tools are tools. The fun part is what you make with them.</p>
+
+          <div class="hand-note">
+            still learning<br>
+            still making ✳
+          </div>
+        </div>
+
+        <div class="skill-groups">
+
+          <div class="skill-group reveal">
+            <span class="group-no">01</span>
+            <div>
+              <h3>Languages &amp; Web</h3>
+              <p>HTML · CSS · JavaScript · C · C++ · Python</p>
+            </div>
+            <span class="group-mark">⌘</span>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="group-no">02</span>
+            <div>
+              <h3>Mobile &amp; Frameworks</h3>
+              <p>Flutter · Android Studio</p>
+            </div>
+            <span class="group-mark">▣</span>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="group-no">03</span>
+            <div>
+              <h3>Database</h3>
+              <p>MySQL</p>
+            </div>
+            <span class="group-mark">◉</span>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="group-no">04</span>
+            <div>
+              <h3>Design</h3>
+              <p>Figma · Canva · PicsArt</p>
+            </div>
+            <span class="group-mark">✳</span>
+          </div>
+
+          <div class="skill-group reveal">
+            <span class="group-no">05</span>
+            <div>
+              <h3>Video Editing</h3>
+              <p>After Effects · Alight Motion · Funimate · Canva · PicsArt</p>
+            </div>
+            <span class="group-mark">▶</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="certifications reveal">
+
+        <div class="cert-heading">
+          <span class="highlight">certified-ish</span>
+          <h3>proof of learning.</h3>
+        </div>
+
+        <div class="cert-list">
+
+          <div>
+            <span>✦</span>
+            <p>
+              <strong>Vibe Coding – L1 Bronze</strong>
+              <small>Lovable · March 2026</small>
+            </p>
+          </div>
+
+          <div>
+            <span>✦</span>
+            <p>
+              <strong>Scaler School of Technology Internship Challenge</strong>
+              <small>Certificate of Participation · 2025</small>
+            </p>
+          </div>
+
+          <div>
+            <span>✦</span>
+            <p><strong>C Programming</strong></p>
+          </div>
+
+          <div>
+            <span>✦</span>
+            <p><strong>Python &amp; MySQL</strong></p>
+          </div>
+
+        </div>
+      </div>
+
     </section>
 
-    <section class="video-section section-pad" id="videos"><div class="video-card reveal"><div><span class="highlight">rolling credits</span><h2>not just code.<br><em>there’s motion too.</em></h2><p>Short-form edits, reels and event videos — a collection of things I’ve cut, timed and pieced together.</p><a class="button button-pink" href="#" target="_blank" rel="noreferrer">watch my edits <span>↗</span></a><small class="placeholder-note">PLACEHOLDER LINK — REPLACE # WITH YOUR VIDEO PORTFOLIO URL</small></div><div class="video-collage"><div class="mini-frame frame-one">PLAY ▶<span>01 / CUT</span></div><div class="mini-frame frame-two">✳<span>02 / RHYTHM</span></div><div class="mini-frame frame-three">REEL<br>IT IN<span>03 / STORY</span></div><span class="collage-star">✦</span></div></div></section>
+    <!-- VIDEO PORTFOLIO -->
+    <section class="video-section section-pad" id="videos">
 
-    <section class="contact pink-section section-pad" id="contact"><div class="section-top"><span class="eyebrow">05 / YOUR TURN</span><span class="pill">open to good ideas ↘</span></div><div class="contact-main reveal"><p class="contact-kicker">have a project in mind?</p><h2>let’s make<br><em>something.</em></h2><a class="contact-email" href="mailto:rukmanishahi107@gmail.com">rukmanishahi107@gmail.com ↗</a><div class="contact-links"><a href="tel:+918527009779">PHONE <span>+91 8527009779 ↗</span></a><a href="https://linkedin.com/in/rukmani-shahi-2835722a7" target="_blank" rel="noreferrer">LINKEDIN <span>connect with me ↗</span></a><a href="mailto:rukmanishahi107@gmail.com">EMAIL <span>say hello ↗</span></a></div><a class="button button-black" href="assets/Rukmani_Shahi_Resume.pdf" download>download resume <span>↓</span></a></div><div class="contact-doodle" aria-hidden="true">✳</div><footer><span>© 2026 RUKMANI SHAHI</span><span>BUILT WITH HTML, CSS &amp; JS</span><a href="#home">BACK TO TOP ↑</a></footer></section>
+      <div class="video-card reveal">
+
+        <div>
+          <span class="highlight">rolling credits</span>
+
+          <h2>
+            not just code.<br>
+            <em>there’s motion too.</em>
+          </h2>
+
+          <p>
+            Short-form edits, reels and event videos — a collection of
+            things I’ve cut, timed and pieced together.
+          </p>
+
+          <a class="button button-pink" href="#" target="_blank" rel="noreferrer">
+            watch my edits <span>↗</span>
+          </a>
+
+          <small class="placeholder-note">
+            PLACEHOLDER LINK — REPLACE # WITH YOUR VIDEO PORTFOLIO URL
+          </small>
+        </div>
+
+        <div class="video-collage">
+          <div class="mini-frame frame-one">
+            PLAY ▶ <span>01 / CUT</span>
+          </div>
+
+          <div class="mini-frame frame-two">
+            ✳ <span>02 / RHYTHM</span>
+          </div>
+
+          <div class="mini-frame frame-three">
+            REEL<br>IT IN <span>03 / STORY</span>
+          </div>
+
+          <span class="collage-star">✦</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact pink-section section-pad" id="contact">
+
+      <div class="section-top">
+        <span class="eyebrow">05 / YOUR TURN</span>
+        <span class="pill">open to good ideas ↘</span>
+      </div>
+
+      <div class="contact-main reveal">
+
+        <p class="contact-kicker">have a project in mind?</p>
+
+        <h2>
+          let’s make<br>
+          <em>something.</em>
+        </h2>
+
+        <a class="contact-email" href="mailto:rukmanishahi107@gmail.com">
+          rukmanishahi107@gmail.com ↗
+        </a>
+
+        <div class="contact-links">
+
+          <a href="tel:+918527009779">
+            PHONE
+            <span>+91 8527009779 ↗</span>
+          </a>
+
+          <a href="https://linkedin.com/in/rukmani-shahi-2835722a7" target="_blank" rel="noreferrer">
+            LINKEDIN
+            <span>connect with me ↗</span>
+          </a>
+
+          <a href="mailto:rukmanishahi107@gmail.com">
+            EMAIL
+            <span>say hello ↗</span>
+          </a>
+
+        </div>
+        <a class="button button-black" href="assets/Rukmani_Shahi_Resume.pdf" download>
+          download resume <span>↓</span>
+        </a>
+
+      </div>
+
+      <div class="contact-doodle" aria-hidden="true">✳</div>
+
+      <footer>
+        <span>© 2026 RUKMANI SHAHI</span>
+        <span>BUILT WITH HTML, CSS &amp; JS</span>
+        <a href="#home">BACK TO TOP ↑</a>
+      </footer>
+
+    </section>
+
   </main>
+
 </body>
 </html>
